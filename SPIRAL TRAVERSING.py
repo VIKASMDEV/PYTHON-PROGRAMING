@@ -1,3 +1,14 @@
+""" Print a given matrix in spiral form
+Given a matrix mat[][] of size m x n, the task is to print all elements of the matrix in spiral form.
+
+Examples:
+
+Input: mat[][] = [[1,    2,   3,   4],
+                            [5,    6,   7,   8],
+                            [9,   10,  11,  12],
+                            [13,  14,  15,  16]]
+Output: [ 1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10 ]
+Example-of-matrix-in-spiral-form """
 def printSpiral(mat):
     # Define ans array to store the result.
     ans = []
