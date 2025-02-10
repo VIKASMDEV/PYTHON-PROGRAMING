@@ -1,3 +1,4 @@
+""" A sales company wants to analyze daily sales data. Given an array of sales numbers, find the day with the highest sales. """
 sales = [120, 450, 320, 560, 760, 800, 540]
 size = len(sales)  # Pythonic way to get the size of the list
 max_sales = sales[0]
