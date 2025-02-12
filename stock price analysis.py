@@ -11,18 +11,33 @@ Output: [20, 30, 50, -1]
 Input: int[] arr = {50, 40, 30, 10}
 Output: [-1, -1, -1, -1]
 """
-def takingvalues():
-    b=[]
-    maxnum=int(input("enter the no of numbers u want to enter : "))
-    for i in range(maxnum):
-        a=input("enter the stock prices of day 1 : ")
-        b.append(a)
+def find_next_greater(prices):
+ 
+    n = len(prices)
+    result = [-1] * n  # Initialize result list with -1
 
-def checkgret():
-    c=[]
-    for i in b:
-        for j in b:
-            if i<j:
-                c.append(j)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if prices[j] > prices[i]:
+                result[i] = prices[j]
+                break  # Found the next greater, move to the next price
+    return result
+
+
+if __name__ == "__main__":
+    
+    size = int(input(f"Enter the number of days: "))
+        
+    prices = []
+    print(f"Enter the stock prices for {size} days:")
+    for _ in range(size):
+        price = int(input())
+        prices.append(price)
+        #print(prices)
+
+    result = find_next_greater(prices)
+    print("Next greater prices:", *result)  # * unpacks the list for printing
+
+
                 
             
